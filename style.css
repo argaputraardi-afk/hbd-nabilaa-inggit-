@@ -1,0 +1,60 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;min-height:100vh;color:#7d2854;
+  background:linear-gradient(145deg,#fff0f6,#ffd6e7 55%,#f5b2cf);
+  font-family:Poppins,sans-serif;overflow-x:hidden
+}
+.sparkles,.sparkles:before,.sparkles:after{
+  position:fixed;inset:0;content:"";pointer-events:none;
+  background-image:radial-gradient(circle,rgba(190,46,105,.35) 1px,transparent 1.5px);
+  background-size:100px 100px;opacity:.2
+}
+.sparkles:before{transform:translate(35px,55px) scale(1.2);opacity:.12}
+.sparkles:after{transform:translate(-25px,-30px) scale(.7);opacity:.15}
+main{position:relative;z-index:2}
+section{min-height:100vh;display:grid;place-items:center;padding:25px 18px}
+.card{
+  width:min(700px,100%);border:1px solid rgba(190,65,120,.18);
+  background:rgba(255,255,255,.52);backdrop-filter:blur(14px);
+  border-radius:24px;box-shadow:0 25px 70px rgba(177,52,105,.16)
+}
+.intro{text-align:center;padding:58px 25px}
+.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#b65b83}
+.cake{font-size:66px;margin:25px 0 10px;filter:drop-shadow(0 7px 5px rgba(190,57,111,.15))}
+h1,h2{font-family:"DM Serif Display",serif;font-weight:400}
+h1{font-size:clamp(43px,10vw,70px);line-height:1.05;margin:10px 0 22px;color:#c93672}
+h2{font-size:clamp(36px,8vw,52px);margin:10px 0 28px;color:#bd326b}
+.intro p{color:#9a5576;font-size:13px;margin-bottom:30px}
+button{
+  border:0;border-radius:999px;padding:13px 23px;cursor:pointer;
+  background:#df4d87;color:#fff;font:600 12px Poppins;transition:.25s
+}
+button:hover{transform:translateY(-2px);background:#c93672}
+button:focus-visible{outline:3px solid #a92962;outline-offset:3px}
+.hidden{display:none}
+#message,#surprise{animation:show .8s ease both}
+.letter{padding:43px clamp(25px,6vw,68px)}
+.label{font-size:10px;letter-spacing:3px;color:#b56c8e}
+.letter p,.ending p{color:#925273;font-size:14px;line-height:2;margin:0 0 21px}
+.closing{color:#9b3f6d!important}
+.sign{color:#b36d8d;font-family:"DM Serif Display",serif;font-size:19px;margin:35px 0}
+.ending{text-align:center;padding:65px 28px}
+.number{font-size:10px;letter-spacing:4px;color:#bd7c9c}
+.confetti{font-size:55px;margin:15px}
+.strong{color:#c13a72!important;font-weight:600}
+.final{margin-top:34px;font-size:clamp(19px,5vw,27px);letter-spacing:2px;font-weight:600;color:#c93672}
+.small{margin-top:10px;color:#b77a98;font-size:11px}
+.music{
+  position:fixed;z-index:10;bottom:17px;left:17px;display:flex;
+  align-items:center;gap:8px;background:rgba(255,245,250,.9);
+  border:1px solid rgba(195,72,125,.2);border-radius:999px;
+  padding:5px 12px 5px 5px;font-size:10px;color:#a34f77;
+  box-shadow:0 5px 20px rgba(177,52,105,.12)
+}
+#musicBtn{width:33px;height:33px;padding:0}
+@keyframes show{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@media(max-width:520px){
+  .intro{padding:48px 22px}.letter{padding:35px 24px}
+  .letter p,.ending p{font-size:13px;line-height:1.9}
+}
